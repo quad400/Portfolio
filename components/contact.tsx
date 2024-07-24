@@ -104,10 +104,10 @@ const Contact = () => {
                 onSubmit={form.handleSubmit(handleSubmit)}
                 className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
               >
-                <h2 className="text-4xl text-accent">Let's work together</h2>
+                <h2 className="text-4xl text-accent">Let&apos;s work together</h2>
                 <p className="text-white/60">
                   Are you looking for a dedicated and skilled fullstack and
-                  mobile developer to bring your vision to life? Let's
+                  mobile developer to bring your vision to life? Let&apos;s
                   collaborate to create exceptional digital experiences that
                   make a lasting impact. Here’s how we can work together:
                 </p>
