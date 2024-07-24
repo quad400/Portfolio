@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export default async function POST(req: Request, res: Response) {
-  const { firstName, lastName, email, message } = await req.json();
-  const name = `${firstName} ${lastName}`;
+export async function POST(req: Request) {
+  const { name, email, message, serviceType, phoneNumber } = await req.json();
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -15,16 +14,16 @@ export default async function POST(req: Request, res: Response) {
 
   const mailOptions = {
     from: email,
-    to: process.env.EMAIL_USER,
-    subject: `New Contact Form Submission from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    to: process.env.NEXT_PUBLIC_EMAIL_USER,
+    subject: `Your Service is needed `,
+    text: `Hi,\n My name is ${name}, i'm currently in need of you service as a ${serviceType}.\n If you are interested pls contact me at ${phoneNumber} and ${email} \n\n ${message}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    NextResponse.json({ message: "Form submitted successfully!" });
-  } catch (error) {
-    throw new NextResponse("Error sending email. Please try again later.", {
+    return NextResponse.json({ message: "Form submitted successfully!" });
+  } catch (error: any) {
+    throw new NextResponse(`Error sending email. Please try again later.${error.message}`, {
       status: 500,
     });
   }

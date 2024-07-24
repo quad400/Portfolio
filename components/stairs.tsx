@@ -42,7 +42,7 @@ const Stairs = () => {
       >
         <path d="m18 16 4-4-4-4" />
         <path d="m6 8-4 4 4 4" />
-        <path d="m14.5 4-5 16" color="lightGreen" />
+        <path d="m14.5 4-5 16" color="#00FF99" />
       </svg>
       <motion.svg
         className="w-[300px] h-[300px] xl:h-[506px] xl:w-[506px]"
