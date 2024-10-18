@@ -33,7 +33,7 @@ const services = [
 
 const Services = () => {
   return (
-    <motion.section id="services" className="min-h-[90vh] flex flex-col justify-center py-12 xl:px-0">
+    <motion.section id="services" className="h-full flex flex-col justify-center py-12 xl:px-0">
       <div className="container mx-auto">
         <div className="flex py-8 flex-col justify-start items-start">
           <h2 className="xl:text-6xl text-4xl font-bold">Services</h2>

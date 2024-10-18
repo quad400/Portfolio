@@ -1,10 +1,10 @@
 "use client";
 
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { BsArrowDownRight, BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
@@ -14,83 +14,8 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import SwiperBtn from "@/components/swiper-btn";
+import { projects } from "@/constants/data";
 
-const projects = [
-  {
-    num: "01",
-    category: "fullstack",
-    title: "Talkie Talker",
-    description:
-      "Talkie Talker is a cutting-edge messaging platform designed specifically for realtors, enabling seamless communication with clients, colleagues, and partners. As a solo creator, I've poured my heart and soul into crafting a unique solution that addresses the communication needs of real estate professionals.",
-    stack: [
-      { name: "Next Js" },
-      { name: "MongoDB" },
-      { name: "ReactJs" },
-      { name: "Shadcn UI" },
-      { name: "Socket.io" },
-      { name: "Tailwind Css" },
-      { name: "Typescript" },
-    ],
-    video: null,
-    image: "/assets/work/project1.png",
-    live: "https://talkietalker.onrender.com/",
-    github: "",
-  },
-  {
-    num: "02",
-    category: "fullstack",
-    title: "Stack",
-    description:
-      "Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with Stack.",
-    stack: [
-      { name: "ExpressJs" },
-      { name: "MongoDB" },
-      { name: "ReactJs" },
-      { name: "Shadcn UI" },
-      { name: "Tailwind Css" },
-      { name: "Typescript" },
-    ],
-    video: null,
-    image: "/assets/work/project2.png",
-    live: "https://stack-five.vercel.app",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "mobile develpment",
-    title: "Trendzy",
-    description:
-      "Trendz Wears is a mobile application that allows users to shop for the latest fashion trends. With a user-friendly interface and a wide range of products, Trendz Wears makes shopping fun and convenient.",
-    stack: [
-      { name: "React Native" },
-      { name: "Express JS" },
-      { name: "MongoDB" },
-      { name: "Javascript" },
-      { name: "Redux" },
-    ],
-    video: "/assets/work/project3.mp4",
-    image: null,
-    live: "",
-    github: "https://github.com/quad400/Trendz-Wears-App",
-  },
-  {
-    num: "04",
-    category: "mobile develpment",
-    title: "Serviceo",
-    description:
-      "Serviceo is a mobile application that connects users with local service providers. Whether you need a plumber, electrician, or cleaner, Serviceo has got you covered. With a simple and intuitive interface, finding the right service provider is just a tap away.",
-    stack: [
-      { name: "React Native" },
-      { name: "Tailwind Css" },
-      { name: "Javascript" },
-      { name: "Redux" },
-    ],
-    video: "/assets/work/project4.mp4",
-    image: null,
-    live: "https://github.com/quad400/serviceo-api",
-    github: "https://github.com/quad400/serviceo-api",
-  },
-];
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -131,7 +56,7 @@ const Work = () => {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link href={project.github}  target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -143,7 +68,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">

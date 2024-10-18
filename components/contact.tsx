@@ -11,7 +11,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import {
@@ -23,30 +22,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { info } from "@/constants/data";
 
-const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    value: "(+234) 813 9596 749",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "Email",
-    value: "adedijiabdulquadri@gamil.com",
-  },
-  {
-    icon: <FaMapMarkedAlt />,
-    title: "Address",
-    value: "Ogun State, Nigeria",
-  },
-];
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),

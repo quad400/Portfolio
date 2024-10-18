@@ -30,7 +30,7 @@ const Home = () => {
                 size="lg"
                 className="uppercase group flex items-center gap-2"
               >
-                <Link href="https://petabytesports-my.sharepoint.com/:w:/g/personal/abdulquadri_pesports_gg/EWprdyJ5fVhLoTP1wB5JiiUBMukS8D34CGri7Ga7dWZgfA?e=DSrbe3">Download CV</Link>
+                <Link download="/assets/cv.docx" href="/assets/cv.docx">Download CV</Link>
                 <Download className="h-4 w-4 text-accent group-hover:text-primary" />
               </Button>
               <div className="mb-4 xl:mb-0">

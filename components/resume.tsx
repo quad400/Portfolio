@@ -1,8 +1,6 @@
 "use client"
 
-import { FaReact, FaNodeJs, FaHtml5, FaPython, FaCss3 } from "react-icons/fa";
-import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -12,130 +10,8 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { about, education, experience, skills } from "@/constants/data";
 
-const about = {
-  title: "About me",
-  description:
-    "Hello! I'm Adediji Abdulquadri, a passionate fullstack and mobile developer with a diverse background and a commitment to crafting exceptional digital experiences. With a Bachelor of Science degree in Physics from the University of Ilorin, I transitioned from understanding the principles of the physical world to creating innovative software solutions that make a difference.",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Adediji Abdulquadri",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+234) 813 959 6749",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "4+ Years",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Nigerian",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "adedijiabdulquadri@gmail.com",
-    },
-    {
-      fieldName: "Open to work",
-      fieldValue: "Freelance, Full-time",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, Yoruba",
-    },
-  ],
-};
-
-const experience = {
-  icon: "/assets/resume/badge.svg",
-  title: "My experience",
-  description:
-    "With over 4years of experience in fullstack and mobile development, I have honed my skills in creating robust, scalable, and user-friendly applications. My journey as a developer has equipped me with a diverse set of technical proficiencies and a deep understanding of both frontend and backend development.",
-  items: [
-    {
-      company: "Petabyte Technologies",
-      position: "Full Stack Developer (Team Lead)",
-      duration: "2023 - Present",
-    },
-    {
-      company: "Lundenva",
-      position: "Mobile Developer",
-      duration: "2022 - 2023",
-    },
-  ],
-};
-
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "My education",
-  description:
-    "I graduated with a Bachelor of Science degree in Physics from the University of Ilorin. My academic journey provided me with a solid foundation in analytical thinking, problem-solving, and a deep understanding of the physical principles that underpin modern technology. While studying Physics, I developed a keen interest in computational methods and software development, which ultimately led me to pursue a career in fullstack and mobile development.",
-  items: [
-    {
-      institution: "University Of Ilorin",
-      degree: "Physics",
-      duration: "2018 - 2023",
-    },
-    {
-      institution: "Freecode Camp",
-      degree: "Frontend Web Developent BootCamp",
-      duration: "2021 - 2022",
-    },
-    {
-      institution: "notJust Dev Academy",
-      degree: "Mobile Development BootCamp",
-      duration: "2022 - 2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Full Stack Development",
-      duration: "2020 - 2024",
-    },
-  ],
-};
-
-const skills = {
-  title: "My skills",
-  description:
-    "As a versatile fullstack and mobile developer, I possess a comprehensive set of skills that span across various aspects of software development. My expertise allows me to build robust, scalable, and user-friendly applications. Here’s an overview of my key skills:",
-  skillLists: [
-    {
-      icon: <FaReact />,
-      name: "react js",
-    },
-    {
-      icon: <TbBrandNextjs />,
-      name: "next js",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node js",
-    },
-    {
-      icon: <FaPython />,
-      name: "python",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css",
-    },
-    {
-      icon: <FaHtml5 />,
-      name: "html",
-    },
-    {
-      icon: <TbBrandReactNative />,
-      name: "react native",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind css",
-    },
-  ],
-};
 
 const Resume = () => {
   return (
@@ -146,7 +22,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] fle items-center justify-center py-12 xl:py-0"
+      className="h-full fle items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         
