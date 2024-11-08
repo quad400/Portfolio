@@ -47,7 +47,7 @@ const MobileNav = () => {
   };
 
   return (
-    <Sheet>
+    <Sheet  open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <AlignRight className="h-10 w-10 text-accent" />
       </SheetTrigger>
