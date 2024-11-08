@@ -12,6 +12,7 @@ const Photo = () => {
           opacity: 1,
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
+        className="w-full h-full justify-center items-center flex flex-1"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -19,7 +20,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[290px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute left-0 top-0"
+          className="w-[190px] h-[198px] xl:w-[398px] xl:h-[398px] mix-blend-lighten absolute left-10 top-10 right-0 justify-center items-center flex"
         >
           <Image
             src="/assets/photo.png"

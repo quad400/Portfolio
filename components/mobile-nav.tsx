@@ -11,6 +11,8 @@ import { AlignRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
+import {useState} from "react"
+
 
 const links = [
   {
@@ -37,6 +39,13 @@ const links = [
 
 const MobileNav = () => {
   const pathname = usePathname();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSheetClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
@@ -56,6 +65,7 @@ const MobileNav = () => {
               <Link
                 key={index}
                 href={link.path}
+                onClick={handleSheetClose}
                 className={cn(
                   "capitalize font-medium hover:text-accent transition-all",
                   link.path === pathname &&
@@ -68,7 +78,7 @@ const MobileNav = () => {
             );
           })}
         </nav>
-        <Link href="#contact">
+        <Link href="#contact" onClick={handleSheetClose}>
           <Button>Hire me</Button>
         </Link>
       </SheetContent>

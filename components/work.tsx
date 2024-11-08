@@ -94,14 +94,14 @@ const Work = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full h-[460px] flex group justify-center items-center">
+                  <div className="relative w-full h-[200px] sm:h-[400px] flex group justify-center items-center">
                     <div className="absolute top-0 bottom-0 h-full w-full bg-black-10 z-10"></div>
-                    <div className="w-full h-full">
+                    <div className="relative h-[200px] w-full sm:h-[400px]">
                       {project?.image && (
                         <Image
                           src={project.image}
                           fill
-                          className="aspect-video"
+                          className="object-cover"
                           alt={project.title}
                         />
                       )}
