@@ -13,11 +13,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `Portfolio | Coderblack`,
-    template: `Portfolio | Coderblack`
+    default: `Adediji Abdulquadri | Mobile & Full Stack Engineer`,
+    template: `%s | Adediji Abdulquadri`,
   },
   description:
-    "Portfolio of Adediji Abdulquadri that describes his work experices and skills",
+    "Mobile & Full Stack Engineer shipping React Native, SwiftUI, and Jetpack Compose apps — with NestJS, Django, and Next.js backends.",
   icons: [
     {
       url: "/logo.svg",

@@ -14,14 +14,15 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Mobile & Full Stack Engineer</span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />{" "}
               <span className="text-accent">Adediji Abdulquadri</span>
             </h1>
-            <p>
-              I excel in crafting elegant digital expriences and proficient and
-              various programming languages and technologies
+            <p className="max-w-[500px] mx-auto xl:mx-0">
+              I ship cross-platform and native apps with React Native, SwiftUI,
+              and Jetpack Compose — and own work end to end into NestJS, Django,
+              and Next.js services.
             </p>
 
             <div className="flex flex-col xl:flex-row justify-start items-center mt-6 gap-5">
@@ -29,9 +30,12 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase group flex items-center gap-2"
+                asChild
               >
-                <Link download="/assets/cv.docx" href="/assets/cv.docx">Download CV</Link>
-                <Download className="h-4 w-4 text-accent group-hover:text-primary" />
+                <Link href="/assets/cv.pdf" download>
+                  Download CV
+                  <Download className="h-4 w-4 text-accent group-hover:text-primary" />
+                </Link>
               </Button>
               <div className="mb-4 xl:mb-0">
                 <Socials

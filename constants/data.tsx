@@ -1,96 +1,125 @@
 import {
   FaReact,
-  FaNodeJs,
-  FaHtml5,
   FaPython,
-  FaCss3,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkedAlt,
+  FaSwift,
+  FaDocker,
 } from "react-icons/fa";
-import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+import { TbBrandReactNative, TbBrandNextjs, TbBrandKotlin } from "react-icons/tb";
+import {
+  SiNestjs,
+  SiDjango,
+  SiTypescript,
+  SiRedis,
+  SiFlutter,
+  SiExpo,
+} from "react-icons/si";
 
 export const projects = [
   {
     num: "01",
-    category: "fullstack",
-    title: "Talkie Talker",
+    category: "mobile development",
+    title: "DriveToPass",
     description:
-      "Talkie Talker is a cutting-edge messaging platform designed specifically for realtors, enabling seamless communication with clients, colleagues, and partners. As a solo creator, I've poured my heart and soul into crafting a unique solution that addresses the communication needs of real estate professionals.",
+      "A UK driving test app across iOS and Android, supporting navigation, driving sessions, and test preparation workflows — including Mapbox turn-by-turn navigation and CarPlay integration.",
     stack: [
-      { name: "Next Js" },
-      { name: "MongoDB" },
-      { name: "ReactJs" },
-      { name: "Shadcn UI" },
-      { name: "Socket.io" },
-      { name: "Tailwind Css" },
-      { name: "Typescript" },
+      { name: "SwiftUI" },
+      { name: "Kotlin" },
+      { name: "Jetpack Compose" },
+      { name: "Mapbox" },
+      { name: "CarPlay" },
     ],
-    video: null,
-    image: "/assets/work/project1.png",
-    live: "https://talkie-talker-six.vercel.app/",
-    github: "https://github.com/quad400/Talkie-Talker",
+    live: "#",
+    github: "https://github.com/quad400",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "Stack",
+    category: "mobile development",
+    title: "QuickCheck",
     description:
-      "Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with Stack.",
+      "Fintech mobile and backend work spanning liveliness checks that unblocked ~70% of users during verification, plus Django bill-payment features with admin tooling and discount management.",
     stack: [
-      { name: "ExpressJs" },
-      { name: "MongoDB" },
-      { name: "ReactJs" },
-      { name: "Shadcn UI" },
-      { name: "Tailwind Css" },
-      { name: "Typescript" },
+      { name: "React Native" },
+      { name: "Django" },
+      { name: "TypeScript" },
+      { name: "Python" },
+      { name: "Redux" },
     ],
-    video: null,
-    image: "/assets/work/project2.png",
-    live: "https://stack-five.vercel.app",
-    github: "https://github.com/quad400/Stack-Client",
+    live: "#",
+    github: "https://github.com/quad400",
   },
   {
     num: "03",
-    category: "backend develpment",
-    title: "Krendzy B2B Ecommerce Application",
+    category: "fullstack",
+    title: "CourierDock",
     description:
-      "This API serves as the backbone for a B2B e-commerce application, featuring functionalities for user management, product handling, shopping cart operations, and payment processing. It’s built using NestJS with a focus on scalability, security, and maintainability.",
+      "A cross-platform delivery app covering order tracking, dispatch, and delivery confirmation — with Zustand state management, Redis caching for live order status, and RabbitMQ for reliable event delivery.",
     stack: [
-      { name: "Nest Js" },
-      { name: "Postgresql" },
-      { name: "Typeorm" },
+      { name: "React Native" },
+      { name: "Expo" },
+      { name: "Zustand" },
+      { name: "NestJS" },
       { name: "Redis" },
+      { name: "RabbitMQ" },
     ],
-    image: "/assets/work/project4.png",
-    live: "https://documenter.getpostman.com/view/34498096/2sAXjDfbRE",
-    github: "https://github.com/quad400/kdtrendzapi",
+    live: "#",
+    github: "https://github.com/quad400",
   },
   {
     num: "04",
-    category: "mobile develpment",
-    title: "Trendzy",
+    category: "fullstack",
+    title: "AutoTout",
     description:
-      "Trendz Wears is a mobile application that allows users to shop for the latest fashion trends. With a user-friendly interface and a wide range of products, Trendz Wears makes shopping fun and convenient.",
+      "A vehicle marketplace platform spanning mobile, admin dashboard, and backend — React Query for data sync, Next.js admin tooling, Redis caching, and integrations for listings, payments, and identity verification.",
     stack: [
+      { name: "Next.js" },
       { name: "React Native" },
-      { name: "Express JS" },
-      { name: "MongoDB" },
-      { name: "Javascript" },
-      { name: "Redux" },
+      { name: "Expo" },
+      { name: "TypeScript" },
+      { name: "React Query" },
+      { name: "Redis" },
     ],
-    video: "/assets/work/project3.mp4",
-    image: null,
-    live: "https://github.com/quad400/Trendz-Wears-App",
-    github: "https://github.com/quad400/Trendz-Wears-App",
+    live: "#",
+    github: "https://github.com/quad400",
+  },
+  {
+    num: "05",
+    category: "frontend",
+    title: "Orderwayz",
+    description:
+      "Frontend for a multi-tenant ordering platform that helps vendors—including restaurants—manage businesses online, with vendor admin for orders, inventory, products, and customers, plus responsive vendor websites and dashboards.",
+    stack: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "React Query" },
+    ],
+    live: "#",
+    github: "https://github.com/quad400",
+  },
+  {
+    num: "06",
+    category: "mobile development",
+    title: "Pillarpay",
+    description:
+      "A fintech mobile app built with Flutter, focused on secure and intuitive financial services — reusable UI components and flows, API integrations, and scalable mobile architecture for core financial features.",
+    stack: [
+      { name: "Flutter" },
+      { name: "Dart" },
+      { name: "Riverpod" },
+      { name: "Dio" },
+    ],
+    live: "#",
+    github: "https://github.com/quad400",
   },
 ];
 
 export const about = {
   title: "About me",
   description:
-    "Hello! I'm Adediji Abdulquadri, a passionate fullstack and mobile developer with a diverse background and a commitment to crafting exceptional digital experiences. With a Bachelor of Science degree in Physics from the University of Ilorin, I transitioned from understanding the principles of the physical world to creating innovative software solutions that make a difference.",
+    "I'm Adediji Abdulquadri, a mobile engineer with a full stack background. I ship cross-platform and native apps with React Native, SwiftUI, and Jetpack Compose across fintech, marketplace, logistics, and navigation products — and I'm comfortable owning work end to end into NestJS, Django, and Next.js services.",
   info: [
     {
       fieldName: "Name",
@@ -103,6 +132,10 @@ export const about = {
     {
       fieldName: "Experience",
       fieldValue: "4+ Years",
+    },
+    {
+      fieldName: "Role",
+      fieldValue: "Mobile & Full Stack Engineer",
     },
     {
       fieldName: "Nationality",
@@ -127,17 +160,73 @@ export const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "With over 4years of experience in fullstack and mobile development, I have honed my skills in creating robust, scalable, and user-friendly applications. My journey as a developer has equipped me with a diverse set of technical proficiencies and a deep understanding of both frontend and backend development.",
+    "Mobile engineer with a full stack background, shipping cross-platform and native apps across fintech, marketplace, logistics, and navigation — owning work end to end from mobile into NestJS, Django, and Next.js services.",
   items: [
     {
-      company: "Petabyte Technologies",
-      position: "Full Stack Developer (Team Lead)",
-      duration: "2023 - Present",
+      company: "Pillarpay",
+      position: "Mobile Engineer",
+      duration: "Present",
+      tech: "Flutter, Dart, Riverpod, Dio",
+      highlights: [
+        "Developing a fintech mobile app focused on secure and intuitive financial services",
+        "Implemented reusable UI components and application flows with Flutter and Dart",
+        "Integrated APIs and managed state to support core financial features and workflows",
+      ],
     },
     {
-      company: "Lundenva",
-      position: "Mobile Developer",
-      duration: "2022 - 2023",
+      company: "DriveToPass",
+      position: "Mobile Engineer",
+      duration: "03/2026 – Present",
+      tech: "SwiftUI, Kotlin, Jetpack Compose, Mapbox Navigation SDK, CarPlay",
+      highlights: [
+        "Built a UK driving test app across iOS and Android for navigation, sessions, and test prep",
+        "Integrated Mapbox Navigation SDK for real-time turn-by-turn navigation on iOS",
+        "Shipped Android with Kotlin and Jetpack Compose, plus CarPlay for in-car displays",
+      ],
+    },
+    {
+      company: "QuickCheck",
+      position: "Mobile Engineer",
+      duration: "10/2025 – Present",
+      tech: "React Native, Django, TypeScript, Python, Redux, Android",
+      highlights: [
+        "Contributed to liveliness checks that unblocked ~70% of users in verification flows",
+        "Built Django bill-payment features with admin tooling and discount management",
+        "Refactored React Native code for reusability, maintainability, and performance",
+      ],
+    },
+    {
+      company: "Orderwayz",
+      position: "Frontend Developer",
+      duration: "2024 – 2026",
+      tech: "Next.js, React, TypeScript, React Query",
+      highlights: [
+        "Built and maintained the frontend of a multi-tenant ordering platform for vendors",
+        "Shipped vendor admin for orders, inventory, products, customers, and operations",
+        "Developed responsive vendor websites and dashboards for online presence and orders",
+      ],
+    },
+    {
+      company: "CourierDock",
+      position: "Mobile Full Stack Developer",
+      duration: "07/2025 – 08/2026",
+      tech: "React Native, Expo, Zustand, Redis, RabbitMQ, NestJS",
+      highlights: [
+        "Built a cross-platform delivery app for tracking, dispatch, and confirmation",
+        "Used Zustand for lightweight state across delivery, courier, and admin views",
+        "Added Redis caching and RabbitMQ queues for live status and reliable events",
+      ],
+    },
+    {
+      company: "AutoTout",
+      position: "Full Stack Mobile Developer",
+      duration: "01/2025 – 01/2026",
+      tech: "Next.js, React Native, Expo, TypeScript, React Query, Redis",
+      highlights: [
+        "Shipped a vehicle marketplace across mobile, frontend, and backend",
+        "Built Next.js admin dashboard for listings, sellers, and transactions",
+        "Integrated listings, payments, and identity verification with Redis caching",
+      ],
     },
   ],
 };
@@ -146,27 +235,13 @@ export const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "I graduated with a Bachelor of Science degree in Physics from the University of Ilorin. My academic journey provided me with a solid foundation in analytical thinking, problem-solving, and a deep understanding of the physical principles that underpin modern technology. While studying Physics, I developed a keen interest in computational methods and software development, which ultimately led me to pursue a career in fullstack and mobile development.",
+    "I graduated with a Bachelor of Science in Physics from the University of Ilorin. The degree built strong analytical and problem-solving foundations that I now apply to mobile and full stack engineering.",
   items: [
     {
-      institution: "University Of Ilorin",
-      degree: "Physics",
-      duration: "2018 - 2023",
-    },
-    {
-      institution: "Freecode Camp",
-      degree: "Frontend Web Developent BootCamp",
-      duration: "2021 - 2022",
-    },
-    {
-      institution: "notJust Dev Academy",
-      degree: "Mobile Development BootCamp",
-      duration: "2022 - 2023",
-    },
-    {
-      institution: "Online Course",
-      degree: "Full Stack Development",
-      duration: "2020 - 2024",
+      institution: "University of Ilorin, Nigeria",
+      degree: "B.S. in Physics",
+      duration: "2018 – 2023",
+      detail: "CGPA 3.94",
     },
   ],
 };
@@ -174,39 +249,59 @@ export const education = {
 export const skills = {
   title: "My skills",
   description:
-    "As a versatile fullstack and mobile developer, I possess a comprehensive set of skills that span across various aspects of software development. My expertise allows me to build robust, scalable, and user-friendly applications. Here’s an overview of my key skills:",
+    "I work across mobile and full stack — from React Native, SwiftUI, and Jetpack Compose to NestJS, Django, and Next.js — with the languages and platforms needed to ship production apps end to end.",
   skillLists: [
     {
-      icon: <FaReact />,
-      name: "react js",
+      icon: <TbBrandReactNative />,
+      name: "react native",
+    },
+    {
+      icon: <SiExpo />,
+      name: "expo",
+    },
+    {
+      icon: <FaSwift />,
+      name: "swiftui",
+    },
+    {
+      icon: <TbBrandKotlin />,
+      name: "kotlin / compose",
+    },
+    {
+      icon: <SiFlutter />,
+      name: "flutter",
     },
     {
       icon: <TbBrandNextjs />,
       name: "next js",
     },
     {
-      icon: <FaNodeJs />,
-      name: "node js",
+      icon: <SiNestjs />,
+      name: "nestjs",
+    },
+    {
+      icon: <SiDjango />,
+      name: "django",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
     {
       icon: <FaPython />,
       name: "python",
     },
     {
-      icon: <FaCss3 />,
-      name: "css",
+      icon: <SiRedis />,
+      name: "redis",
     },
     {
-      icon: <FaHtml5 />,
-      name: "html",
+      icon: <FaReact />,
+      name: "react js",
     },
     {
-      icon: <TbBrandReactNative />,
-      name: "react native",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind css",
+      icon: <FaDocker />,
+      name: "docker",
     },
   ],
 };
@@ -215,12 +310,12 @@ export const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    value: "(+234) 813 9596 749",
+    value: "(+234) 813 959 6749",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    value: "adedijiabdulquadri@gamil.com",
+    value: "adedijiabdulquadri@gmail.com",
   },
   {
     icon: <FaMapMarkedAlt />,

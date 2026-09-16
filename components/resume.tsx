@@ -1,5 +1,4 @@
-"use client"
-
+"use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -12,7 +11,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import { about, education, experience, skills } from "@/constants/data";
 
-
 const Resume = () => {
   return (
     <motion.section
@@ -22,11 +20,10 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="h-full fle items-center justify-center py-12 xl:py-0"
+      className="h-full flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        
-      <div className="flex py-8 flex-col justify-start items-start">
+        <div className="flex py-8 flex-col justify-start items-start">
           <h2 className="xl:text-6xl text-4xl font-bold">Resume</h2>
           <span className="h-1 w-20 bg-accent rounded-lg"></span>
         </div>
@@ -48,21 +45,30 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[520px]">
+                  <ul className="grid grid-cols-1 gap-[30px] pr-3">
                     {experience.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329] py-6 px-8 rounded-xl flex flex-col justify-start items-center lg:items-start gap-3 text-left"
                       >
                         <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] min-h-[60px]">
-                          {item.position}
-                        </h3>
+                        <h3 className="text-xl font-semibold">{item.position}</h3>
                         <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent shrink-0"></span>
                           <p className="text-white/60">{item.company}</p>
                         </div>
+                        <p className="text-sm text-accent/80">{item.tech}</p>
+                        <ul className="flex flex-col gap-2 w-full">
+                          {item.highlights.slice(0, 3).map((highlight, i) => (
+                            <li
+                              key={i}
+                              className="text-sm text-white/60 leading-relaxed list-disc ml-4"
+                            >
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
                   </ul>
@@ -80,7 +86,7 @@ const Resume = () => {
                     {education.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329] min-h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px]">
@@ -90,6 +96,11 @@ const Resume = () => {
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                           <p className="text-white/60">{item.institution}</p>
                         </div>
+                        {item.detail && (
+                          <p className="text-sm text-accent/80 mt-1">
+                            {item.detail}
+                          </p>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -104,18 +115,18 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                   {skills.skillLists.map((item, index) => (
                     <li key={index}>
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                          <TooltipTrigger className="w-full h-[120px] md:h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <div className="text-5xl md:text-6xl group-hover:text-accent transition-all duration-300">
                               {item.icon}
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p>{item.name}</p>
+                            <p className="capitalize">{item.name}</p>
                           </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>

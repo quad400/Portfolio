@@ -33,7 +33,7 @@ const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z.string().email().min(1, { message: "Email is required" }),
   phoneNumber: z.string().min(1, { message: "Phone number is required" }),
-  serviceType: z.string().min(1, { message: "Sevice type is required" }),
+  serviceType: z.string().min(1, { message: "Service type is required" }),
   message: z.string().optional(),
 });
 
@@ -87,10 +87,10 @@ const Contact = () => {
               >
                 <h2 className="text-4xl text-accent">Let&apos;s work together</h2>
                 <p className="text-white/60">
-                  Are you looking for a dedicated and skilled fullstack and
-                  mobile developer to bring your vision to life? Let&apos;s
-                  collaborate to create exceptional digital experiences that
-                  make a lasting impact. Here’s how we can work together:
+                  Looking for a Mobile & Full Stack Engineer to ship
+                  cross-platform apps, native iOS/Android features, or backend
+                  services? Tell me about your project and let&apos;s build it
+                  together.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
@@ -157,20 +157,17 @@ const Contact = () => {
                         <SelectContent>
                           <SelectGroup>
                             <SelectLabel>Select a service</SelectLabel>
-                            <SelectItem value="webdev">
-                              Web Development
+                            <SelectItem value="cross-platform">
+                              Cross-platform Mobile
                             </SelectItem>
-                            <SelectItem value="frontend">
-                              Frontend Development
+                            <SelectItem value="native">
+                              Native iOS & Android
                             </SelectItem>
-                            <SelectItem value="backend">
-                              Backend Development
+                            <SelectItem value="apis">
+                              Full Stack APIs
                             </SelectItem>
-                            <SelectItem value="mobile">
-                              Mobile Development
-                            </SelectItem>
-                            <SelectItem value="fullstack">
-                              Fullstack Development
+                            <SelectItem value="fintech">
+                              Product & Fintech Features
                             </SelectItem>
                           </SelectGroup>
                         </SelectContent>

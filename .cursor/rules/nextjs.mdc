@@ -1,0 +1,17 @@
+---
+description: Next.js App Router conventions for this portfolio
+globs: app/**/*.{ts,tsx}, components/**/*.{ts,tsx}, lib/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next.js
+
+- Use the App Router (`app/`). Prefer Server Components; add `"use client"` only when needed (hooks, events, browser APIs).
+- Put pages/layouts in `app/`, UI in `components/`, shared helpers in `lib/`, static data in `constants/`.
+- Import with `@/` (e.g. `@/components/header`).
+- Style with Tailwind. Reuse `components/ui` and `cn()` from `@/lib/utils`.
+- Use `next/image` and `next/link` instead of raw `<img>` / `<a>` for internal routes.
+- Load fonts via `next/font` in `app/layout.tsx`. Export `metadata` (or `generateMetadata`) from layouts/pages.
+- API handlers live in `app/api/**/route.ts`. Validate input (Zod) and return typed `Response`/`NextResponse`.
+- Keep components small and colocated; avoid prop-drilling shared UI into the layout when a local section component is enough.
+- Do not add `useMemo`/`useCallback` unless profiling shows a need. Prefer clear, readable code.

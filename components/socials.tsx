@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const socials = [
@@ -8,11 +8,7 @@ const socials = [
   },
   {
     icon: <Linkedin />,
-    path: "https://www.linkedin.com/in/abdulquadri-adediji-161925209/ ",
-  },
-  {
-    icon: <Twitter />,
-    path: "",
+    path: "https://www.linkedin.com/in/abdulquadri-adediji/",
   },
 ];
 
@@ -26,7 +22,13 @@ const Socials = ({
   return (
     <div className={containerStyle}>
       {socials.map((item, index) => (
-        <Link href={item.path} key={index} className={iconStyle}>
+        <Link
+          href={item.path}
+          key={index}
+          className={iconStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {item.icon}
         </Link>
       ))}
